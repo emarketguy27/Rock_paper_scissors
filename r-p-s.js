@@ -14,11 +14,11 @@ let intervalId;
 
 function autoPlay() {
   if (!isAutoPlaying) {
-    document.getElementById("js-auto-btn").textContent = "Playing";
+    document.getElementById("js-auto-btn").textContent = "Stop Playing";
     document.getElementById("js-auto-btn").style.color = "gray";
     document.getElementById("js-auto-btn").style.backgroundColor = "gold";
 
-    intervalId = setInterval(function () {
+    intervalId = setInterval(() => {
       const playerMove = pickComputerMove();
       playGame(playerMove);
     }, 2000);
