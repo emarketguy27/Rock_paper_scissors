@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+main {
+  border: 3px solid white;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+}
+h2 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.move-icon {
+  width: 50px;
+}
+.icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.icon-btn {
+  height: 120px;
+  width: 120px;
+  font-size: 48px;
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.icon-btn:hover {
+  background-color: rgb(25, 25, 25);
+  transform: scale(1.02);
+  box-shadow: 0px 0px 20px 2px rgba(128, 128, 128, 0.781);
+}
+.results-container {
+  /* border: 1px solid white; */
+  text-align: center;
+  padding: 1rem 2rem;
+}
+.js-result {
+  font-size: 2rem;
+}
+.js-moves {
+  width: 100%;
+  font-size: 20px;
+  /* border: 1px solid white; */
+  /* font-size: 1.6rem; */
+}
+.js-score {
+  font-size: 1.5rem;
+}
+.reset-btn {
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-size: 1.25rem;
+  padding: 0.35rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+.reset-btn:hover {
+  color: gray;
+}
