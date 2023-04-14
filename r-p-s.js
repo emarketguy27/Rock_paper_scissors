@@ -9,12 +9,30 @@ updateScoreElement();
 function timer() {
   setInterval(playGame(playerMove), 3000);
 }
+let isAutoPlaying = false;
+let intervalId;
 
+function autoPlay() {
+  if (!isAutoPlaying) {
+    document.getElementById("js-auto-btn").textContent = "Playing";
+    document.getElementById("js-auto-btn").style.color = "gray";
+    document.getElementById("js-auto-btn").style.backgroundColor = "gold";
+
+    intervalId = setInterval(function () {
+      const playerMove = pickComputerMove();
+      playGame(playerMove);
+    }, 2000);
+    isAutoPlaying = true;
+  } else {
+    clearInterval(intervalId);
+    isAutoPlaying = false;
+    document.getElementById("js-auto-btn").textContent = "Auto Play";
+    document.getElementById("js-auto-btn").style.color = "gold";
+    document.getElementById("js-auto-btn").style.backgroundColor =
+      "transparent";
+  }
+}
 function playGame(playerMove) {
-  // alert("Ready..........3...!");
-  // alert("2");
-  // alert("1");
-
   const compMove = pickComputerMove();
   let result = "";
   if (playerMove === "Scissors") {

@@ -26,14 +26,19 @@
         <p class="js-moves"></p>
         <p class="js-score"></p>
       </div>
-      <button
-        onclick="score.wins = 0; score.losses = 0; score.ties = 0; 
+      <div class="buttons">
+        <button
+          onclick="score.wins = 0; score.losses = 0; score.ties = 0; 
       localStorage.removeItem('Score')
       updateScoreElement();"
-        class="reset-btn"
-      >
-        Reset Score
-      </button>
+          class="reset-btn"
+        >
+          Reset Score
+        </button>
+        <button class="auto-btn" id="js-auto-btn" onclick="autoPlay()">
+          Auto Play
+        </button>
+      </div>
     </main>
 
     <!-- ************************************************* -->

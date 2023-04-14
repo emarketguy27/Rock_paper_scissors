@@ -57,15 +57,34 @@ h2 {
 .js-score {
   font-size: 1.5rem;
 }
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
 .reset-btn {
-  width: 100%;
-  background-color: white;
-  color: black;
+  width: 50%;
+  background-color: transparent;
+  color: gold;
   font-size: 1.25rem;
   padding: 0.35rem 1rem;
-  border: none;
+  border: 1px solid gold;
   cursor: pointer;
+  border-radius: 10px;
 }
 .reset-btn:hover {
+  color: gray;
+}
+.auto-btn {
+  width: 50%;
+  background-color: transparent;
+  color: gold;
+  font-size: 1.25rem;
+  padding: 0.35rem 1rem;
+  border: 1px solid gold;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.auto-btn:hover {
   color: gray;
 }
